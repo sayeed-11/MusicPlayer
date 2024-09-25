@@ -1,0 +1,242 @@
+@import url('https://fonts.googleapis.com/css2?family=Abel&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Abel&family=Teko:wght@300..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Vast+Shadow&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Abel", sans-serif;
+}
+
+body {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f0eeee;
+}
+
+.main {
+    width: 280px;
+    border-radius: 5px;
+    overflow: hidden;
+    /* box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+    box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1); */
+    box-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.25);
+    /* background: linear-gradient(45deg, #E21C34, #500B28); */
+    background: linear-gradient(45deg, #4CA9DF, #292E91);
+    position: relative;
+    padding: 30px 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    border: 2.5px solid #FFFFFF;
+}
+
+.main .bar {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.main .bar button {
+    outline: none;
+    border: none;
+    background-color: #ffffff00;
+    /* background-color: rgba(255, 255, 255, 0.18);
+    box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+    border: 1.5px solid rgba(255, 255, 255, 0.26); */
+    border-radius: 5%;
+    padding: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.main .bar button:active {
+    background-color: rgba(255, 255, 255, 0.18);
+}
+
+.main .music-thumb {
+    width: 70%;
+    aspect-ratio: 1/1;
+    position: relative;
+    border-radius: 50%;
+    overflow: hidden;
+    background: #F5F5F5;
+    box-shadow: 0px 0px 15px #0000003b;
+}
+
+.main .music-thumb div {
+    position: absolute;
+    inset: 3px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+/* .main .music-thumb div::before{
+    content: '';
+    position: absolute;
+    inset: 75px;
+    background: linear-gradient(45deg, #4CA9DF, #292E91);
+    z-index: 5;
+    border-radius: 50%;
+    border: 2px solid #FFF;
+} */
+
+.main .music-thumb div img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 5%;
+}
+
+.main .music-info :where(h1, p) {
+    text-align: center;
+    color: white;
+}
+
+.main .music-info h1 {
+    font-size: 18px;
+}
+
+.main .music-info p {
+    font-size: 14px;
+}
+
+.main .music-controller {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.main .music-controller button {
+    outline: none;
+    border: none;
+    background-color: transparent;
+    padding: 5px;
+    border-radius: 5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.main .music-controller button:active {
+    background-color: rgba(255, 255, 255, 0.18);
+}
+
+.main .music-controller button.play {
+    font-size: 25px;
+    background-color: rgba(255, 255, 255, 0.18);
+    box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+    border: 1.5px solid rgba(255, 255, 255, 0.26);
+    color: white;
+    width: 50px;
+    aspect-ratio: 1/1;
+    border-radius: 5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main .music-controller button.play:active {
+    transform: scale(0.99);
+}
+
+.main .music-controller button:where(.left-arrow, .right-arrow) {
+    font-size: 20px;
+    width: 40px;
+    aspect-ratio: 1/1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main .music-controller .controller {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.main .music-time-range {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: white;
+    gap: 10px;
+}
+
+.main .music-time-range div {
+    flex: 1;
+    display: flex;
+    align-items: center;
+}
+
+.main .music-time-range span {
+    font-size: 10px;
+}
+
+.main .music-time-range div input {
+    width: 100%;
+    -webkit-appearance: none;
+    appearance: none;
+    height: 2px;
+    background: #dddddd37;
+    outline: none;
+    border-radius: 20px;
+    border: none;
+}
+
+.main .music-time-range div input::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 17px;
+    height: 17px;
+    background: #4CA9DF;
+    cursor: pointer;
+    border-radius: 50%;
+    position: relative;
+    border: 2px solid rgb(255, 255, 255);
+}
+
+.main .music-controller div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main .music-controller div .whole-loop {
+    display: block;
+}
+
+.main .music-controller div .single-loop {
+    display: none;
+    scale: 0.90;
+}
+
+.main .music-controller div .suffle {
+    display: none;
+    scale: 1.5;
+}
+
+.main .music-controller .volume {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main .music-controller .volume .volume-up {
+    display: block;
+}
+
+.main .music-controller .volume .volume-muted {
+    display: none;
+}

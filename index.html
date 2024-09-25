@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Music Player</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+    <div class="musics">
+        <audio></audio>
+    </div>
+    <div class="main">
+        <div class="bar">
+            <button>
+                <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                    width="24" height="24" fill="none" viewBox="0 0 24 24">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-width="2" d="M5 7h14M5 12h14M5 17h10" />
+                </svg>
+            </button>
+            <button>
+                <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                    width="24" height="24" fill="none" viewBox="0 0 24 24">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M12.01 6.001C6.5 1 1 8 5.782 13.001L12.011 20l6.23-7C23 8 17.5 1 12.01 6.002Z" />
+                </svg>
+            </button>
+        </div>
+
+
+
+        <div class="music-thumb">
+            <div>
+                <img src="https://w0.peakpx.com/wallpaper/117/349/HD-wallpaper-music-neon-icon-violet-background-neon-symbols-music-creative-neon-icons-music-sign-music-signs-music-icon-music-icons-thumbnail.jpg"
+                    alt="">
+            </div>
+        </div>
+
+
+        <div class="music-info">
+            <h1 class="song-name">SONG NAME</h1>
+            <p class="artist">Artist Name</p>
+        </div>
+
+
+
+        <div class="music-time-range">
+            <span class="start">00:00</span>
+            <div><input oninput="sliderPrice()" type="range" name="" id="" min="0" max="100" value="0" step="1"></div>
+            <span class="duration">04:56</span>
+        </div>
+
+
+
+
+        <div class="music-controller">
+            <div>
+                <button class="whole-loop">
+                    <?xml version="1.0" encoding="utf-8"?><!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
+                    <svg fill="#FFFFFF" width="24px" height="24px" viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M4.70710678,18 L6.85355339,20.1464466 C7.04881554,20.3417088 7.04881554,20.6582912 6.85355339,20.8535534 C6.65829124,21.0488155 6.34170876,21.0488155 6.14644661,20.8535534 L3.14644661,17.8535534 C2.95118446,17.6582912 2.95118446,17.3417088 3.14644661,17.1464466 L6.14644661,14.1464466 C6.34170876,13.9511845 6.65829124,13.9511845 6.85355339,14.1464466 C7.04881554,14.3417088 7.04881554,14.6582912 6.85355339,14.8535534 L4.70710678,17 L18.5,17 C19.3284271,17 20,16.3284271 20,15.5 L20,12.5 C20,12.2238576 20.2238576,12 20.5,12 C20.7761424,12 21,12.2238576 21,12.5 L21,15.5 C21,16.8807119 19.8807119,18 18.5,18 L4.70710678,18 Z M19.2928932,7 L17.1464466,4.85355339 C16.9511845,4.65829124 16.9511845,4.34170876 17.1464466,4.14644661 C17.3417088,3.95118446 17.6582912,3.95118446 17.8535534,4.14644661 L20.8535534,7.14644661 C21.0488155,7.34170876 21.0488155,7.65829124 20.8535534,7.85355339 L17.8535534,10.8535534 C17.6582912,11.0488155 17.3417088,11.0488155 17.1464466,10.8535534 C16.9511845,10.6582912 16.9511845,10.3417088 17.1464466,10.1464466 L19.2928932,8 L5.5,8 C4.67157288,8 4,8.67157288 4,9.5 L4,12.5 C4,12.7761424 3.77614237,13 3.5,13 C3.22385763,13 3,12.7761424 3,12.5 L3,9.5 C3,8.11928813 4.11928813,7 5.5,7 L19.2928932,7 Z" />
+                    </svg>
+                </button>
+                <button class="single-loop">
+                    <?xml version="1.0" encoding="utf-8"?><!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
+                    <svg width="24px" height="24px" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+                        <polygon fill="#FFFFFF"
+                            points="208 312 208 344 320 344 320 312 280 312 280 176 248 176 248 200 216 200 216 232 248 232 248 312 208 312"
+                            class="ci-primary" />
+                        <path fill="#FFFFFF"
+                            d="M464,210.511V264A112.127,112.127,0,0,1,352,376H78.627l44.686-44.687-22.626-22.626L56,353.373l-4.415,4.414L18.019,391.354,92.041,474.63l23.918-21.26L75.63,408H352c79.4,0,144-64.6,144-144V178.511Z"
+                            class="ci-primary" />
+                        <path fill="#FFFFFF"
+                            d="M48,256A112.127,112.127,0,0,1,160,144H433.373l-44.686,44.687,22.626,22.626L456,166.627l4.117-4.116,33.864-33.865L419.959,45.37,396.041,66.63,436.37,112H160C80.6,112,16,176.6,16,256v85.787l32-32Z"
+                            class="ci-primary" />
+                    </svg>
+                </button>
+                <button class="suffle">
+                    <?xml version="1.0" ?><!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
+                    <svg width="24px" height="24px" viewBox="0 0 1000 1000" data-name="Layer 2" id="Layer_2"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <defs>
+                            <style>
+                                .cls-1 {
+                                    fill: none;
+                                    stroke: #FFFFFF;
+                                    stroke-linecap: round;
+                                    stroke-miterlimit: 10;
+                                    stroke-width: 22px;
+                                }
+                            </style>
+                        </defs>
+                        <path class="cls-1" d="M503.53,555.36l28.82,35.69a40.76,40.76,0,0,0,32.21,15.8H687" />
+                        <path class="cls-1" d="M244.13,391.15H365.29A40.75,40.75,0,0,1,397.5,407l30.05,37.37" />
+                        <path class="cls-1"
+                            d="M687,391.15H565.79a40.75,40.75,0,0,0-32.21,15.79L398.73,591.05a40.75,40.75,0,0,1-32.21,15.79H244.13" />
+                        <line class="cls-1" x1="677.98" x2="755.87" y1="333.1" y2="390.73" />
+                        <line class="cls-1" x1="755.87" x2="677.98" y1="391.86" y2="449.49" />
+                        <line class="cls-1" x1="677.98" x2="755.87" y1="550.51" y2="608.14" />
+                        <line class="cls-1" x1="755.87" x2="677.98" y1="609.27" y2="666.9" />
+                    </svg>
+                </button>
+            </div>
+            <div class="controller">
+                <button class="left-arrow"><i class="fa-solid fa-backward-step"></i></button>
+                <!-- <button class="left-skip"><i class="fa-solid fa-backward"></i></button> -->
+                <div>
+                    <button class="play"><i class="fa-solid fa-play"></i></button>
+                    <!-- <button class="play"><i class="fa-solid fa-play"></i></button> -->
+                </div>
+                <!-- <button class="right-skip"><i class="fa-solid fa-forward-fast"></i></button> -->
+                <button class="right-arrow"><i class="fa-solid fa-forward-step"></i></button>
+            </div>
+            <div class="volume">
+                <button class="volume-up">
+                    <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true"
+                        xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
+                        viewBox="0 0 24 24">
+                        <path
+                            d="M13 6.037c0-1.724-1.978-2.665-3.28-1.562L5.638 7.933H4c-1.105 0-2 .91-2 2.034v4.066c0 1.123.895 2.034 2 2.034h1.638l4.082 3.458c1.302 1.104 3.28.162 3.28-1.562V6.037Z" />
+                        <path fill-rule="evenodd"
+                            d="M14.786 7.658a.988.988 0 0 1 1.414-.014A6.135 6.135 0 0 1 18 12c0 1.662-.655 3.17-1.715 4.27a.989.989 0 0 1-1.414.014 1.029 1.029 0 0 1-.014-1.437A4.085 4.085 0 0 0 16 12a4.085 4.085 0 0 0-1.2-2.904 1.029 1.029 0 0 1-.014-1.438Z"
+                            clip-rule="evenodd" />
+                        <path fill-rule="evenodd"
+                            d="M17.657 4.811a.988.988 0 0 1 1.414 0A10.224 10.224 0 0 1 22 12c0 2.807-1.12 5.35-2.929 7.189a.988.988 0 0 1-1.414 0 1.029 1.029 0 0 1 0-1.438A8.173 8.173 0 0 0 20 12a8.173 8.173 0 0 0-2.343-5.751 1.029 1.029 0 0 1 0-1.438Z"
+                            clip-rule="evenodd" />
+                    </svg>
+                </button>
+                <button class="volume-muted">
+                    <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true"
+                        xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
+                        viewBox="0 0 24 24">
+                        <path
+                            d="M5.707 4.293a1 1 0 0 0-1.414 1.414l14 14a1 1 0 0 0 1.414-1.414l-.004-.005C21.57 16.498 22 13.938 22 12a9.972 9.972 0 0 0-2.929-7.071 1 1 0 1 0-1.414 1.414A7.972 7.972 0 0 1 20 12c0 1.752-.403 3.636-1.712 4.873l-1.433-1.433C17.616 14.37 18 13.107 18 12c0-1.678-.69-3.197-1.8-4.285a1 1 0 1 0-1.4 1.428A3.985 3.985 0 0 1 16 12c0 .606-.195 1.335-.59 1.996L13 11.586V6.135c0-1.696-1.978-2.622-3.28-1.536L7.698 6.284l-1.99-1.991ZM4 8h.586L13 16.414v1.451c0 1.696-1.978 2.622-3.28 1.536L5.638 16H4a2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2Z" />
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="index.js"></script>
+</body>
+
+</html>
